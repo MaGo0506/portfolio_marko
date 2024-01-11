@@ -14,7 +14,11 @@ const Providers = ({ children }: { children: React.ReactNode } ) => {
         return <>{children}</>
     }
 
-    return <ThemeProvider>{children}</ThemeProvider>;
+    return (
+        <ThemeProvider attribute="class">
+            {children}
+        </ThemeProvider>
+    );
 }
  
 export default Providers;

@@ -1,0 +1,21 @@
+
+  .navLink {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 3px;
+  }
+
+  .navLink::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color-mg);
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .navLink:hover::before {
+    width: 100%;
+  }
