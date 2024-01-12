@@ -26,7 +26,7 @@ const Header: React.FC<HeaderProps> = () => {
         </div>
         <div className="flex-grow"></div>
         <div className="flex items-center space-x-4">
-          <a href="#" className={`hover:text-sky-300 ${styles.navLink}`}>
+          <a href="#about" className={`hover:text-sky-300 ${styles.navLink}`}>
             About
           </a>
           <a href="#" className={`hover:text-sky-300 ${styles.navLink}`}>

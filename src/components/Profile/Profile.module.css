@@ -6,5 +6,22 @@
 }
 
 .imgHolder {
+  max-height: 300px;
+  max-width: 300px;
+  height: 100%;
+  width: 100%;
+}
+
+.imgHolder img {
   border: 3px solid var(--primary-color-mg);
+}
+
+.listItem {
+  margin-bottom: 5px;
+}
+
+.listItem::before {
+  content: '➤';
+  margin-right: 8px;
+  color: var(--primary-color-mg);
 }
