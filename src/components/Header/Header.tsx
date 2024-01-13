@@ -10,7 +10,7 @@ interface HeaderProps {}
 
 const Header: React.FC<HeaderProps> = () => {
   const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const {theme, setTheme} = useTheme();
 
   useEffect(() => setMounted(true), []);
 
@@ -19,23 +19,23 @@ const Header: React.FC<HeaderProps> = () => {
   };
 
   return (
-    <nav className={`p-4 sticky top-0 z-40 w-full ${styles.header}`}>
+    <nav className={`py-4 fixed top-0 left-0 z-40 w-full ${styles.header}`}>
       <div className="container mx-auto flex items-center justify-between">
         <div className="flex items-center">
           <span className="font-bold text-2xl text-sky-400">MG</span>
         </div>
         <div className="flex-grow"></div>
         <div className="flex items-center space-x-4">
-          <a href="#about" className={`hover:text-sky-300 ${styles.navLink}`}>
+          <a href="#about" className={`hover:text-sky-400 ${styles.navLink}`}>
             About
           </a>
-          <a href="#" className={`hover:text-sky-300 ${styles.navLink}`}>
+          <a href="#experience" className={`hover:text-sky-400 ${styles.navLink}`}>
             Experience
           </a>
-          <a href="#" className={`hover:text-sky-300 ${styles.navLink}`}>
+          <a href="#" className={`hover:text-sky-400 ${styles.navLink}`}>
             Work
           </a>
-          <a href="#" className={`hover:text-sky-300 ${styles.navLink}`}>
+          <a href="#" className={`hover:text-sky-400 ${styles.navLink}`}>
             Contact
           </a>
           <Button text="Resume" />

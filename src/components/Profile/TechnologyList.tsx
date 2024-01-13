@@ -22,7 +22,7 @@ const renderTechnologyList = (technologyGroup: TechnologyGroup, index: number) =
 
 const TechnologyList = () => {
     return ( 
-        <div className="flex gap-10 text-gray-500">
+        <div className="flex gap-10 text-gray-500 dark:text-gray-400">
             {technologies.map(renderTechnologyList)}
         </div>
      );

@@ -1,0 +1,25 @@
+.line {
+    display: block;
+    height: 2px;
+    width: 70%;
+    background-color: var(--primary-color-mg);
+}
+
+.tab, .selectedTab {
+    border-left: 1px solid;
+}
+
+.slideBlock {
+    transition: transform 0.3s ease;
+    max-height: 28px;
+}
+
+.workListItem {
+    max-width: 90%;
+}
+
+.workListItem::before {
+    content: '➤';
+    margin-right: 8px;
+    color: var(--primary-color-mg);
+}

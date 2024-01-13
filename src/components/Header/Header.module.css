@@ -1,8 +1,13 @@
-
+  .header {
+    backdrop-filter: blur(8px);
+    padding: 1rem 20%;
+  }
+  
   .navLink {
     position: relative;
     display: inline-block;
     padding-bottom: 3px;
+    transition: color .15s ease-in-out
   }
 
   .navLink::before {
