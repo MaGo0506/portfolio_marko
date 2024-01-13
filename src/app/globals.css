@@ -44,15 +44,11 @@ ol {
   padding: 0;
 }
 
-/* styles/globals.css */
-
-/* Default padding for smaller screens */
 body {
   padding-left: 1rem;
   padding-right: 1rem;
 }
 
-/* Responsive padding for larger screens */
 @media (min-width: 768px) {
   body {
     padding-left: 2rem;
