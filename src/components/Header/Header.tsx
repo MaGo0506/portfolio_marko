@@ -22,7 +22,7 @@ const Header: React.FC<HeaderProps> = () => {
     <nav className={`py-4 fixed top-0 left-0 z-40 w-full ${styles.header}`}>
       <div className="container mx-auto flex items-center justify-between">
         <div className="flex items-center">
-          <span className="font-bold text-2xl text-sky-400">MG</span>
+          <a href="#" className="font-bold text-2xl text-sky-400">MG</a>
         </div>
         <div className="flex-grow"></div>
         <div className="flex items-center space-x-4">
@@ -32,8 +32,8 @@ const Header: React.FC<HeaderProps> = () => {
           <a href="#experience" className={`hover:text-sky-400 ${styles.navLink}`}>
             Experience
           </a>
-          <a href="#" className={`hover:text-sky-400 ${styles.navLink}`}>
-            Work
+          <a href="#projects" className={`hover:text-sky-400 ${styles.navLink}`}>
+            Projects
           </a>
           <a href="#" className={`hover:text-sky-400 ${styles.navLink}`}>
             Contact
