@@ -7,7 +7,7 @@ const WorkExperience: React.FC = () => {
         <div id="experience" className="mb-80">
              <div className="flex items-center gap-5 mb-8">
                 <h1 className="font-semibold text-4xl">Work Experience</h1>
-                <div className={styles.line}/>
+                <div className="line"/>
             </div>
             <div>
                 <Tabs 

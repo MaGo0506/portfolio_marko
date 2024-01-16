@@ -35,7 +35,7 @@ const Header: React.FC<HeaderProps> = () => {
           <a href="#projects" className={`hover:text-sky-400 ${styles.navLink}`}>
             Projects
           </a>
-          <a href="#" className={`hover:text-sky-400 ${styles.navLink}`}>
+          <a href="#contact" className={`hover:text-sky-400 ${styles.navLink}`}>
             Contact
           </a>
           <Button text="Resume" />

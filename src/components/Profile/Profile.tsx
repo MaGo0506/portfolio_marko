@@ -7,7 +7,7 @@ const Profile: React.FC = () => {
         <div id="about" className="mb-80">
             <div className="flex items-center gap-5 mb-8">
                 <h1 className="font-semibold text-4xl">About me</h1>
-                <div className={styles.line}/>
+                <div className="line"/>
             </div>
             <div className="flex gap-10 text-gray-500 dark:text-gray-400">
                 <div className="w-3/4 flex flex-col">

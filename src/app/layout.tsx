@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import {  Lato, Poppins } from 'next/font/google'
+import { Lato, Poppins } from 'next/font/google'
 import './globals.css'
 import { Header, Footer } from '@/components'
 import Providers from './providers'
