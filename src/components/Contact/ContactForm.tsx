@@ -1,55 +1,42 @@
 import React, { useState } from 'react';
 import styles from './ContactForm.module.css';
 
-interface ContactFormProps {
-  onSubmit: (formData: {
-    fullName: string;
-    email: string;
-    phone: string;
-    subject: string;
-    message: string;
-  }) => void;
-}
-
-const ContactForm: React.FC<ContactFormProps> = () => {
+const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
-    fullName: '',
-    email: '',
-    phone: '',
-    subject: '',
-    message: '',
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
   });
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    
+  
     try {
-      await fetch("/api/send", {
+      const response = await fetch("/api/send", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({
-          from: `${formData.fullName} <${formData.email}>`,
-          fullName: formData.fullName,
-          phone: formData.phone,
-          subject: formData.subject,
-          message: formData.message
-        }),
-      });
-      console.log('Email sent successfully!');
-      setFormData({
-        fullName: '',
-        email: '',
-        phone: '',
-        subject: '',
-        message: '',
-      });
+        body: JSON.stringify(formData),
+      });    
+  
+      if (response.ok) {
+        console.log('Email sent successfully!');
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          subject: "",
+          message: "",
+        });
+      } else {
+        console.error('Failed to send email. Server responded with:', response.status);
+      }
     } catch (error) {
       console.error('Failed to send email:', error);
     }
-
-    // onSubmit(formData);
   };
 
   const handleInputChange = (
@@ -70,8 +57,8 @@ const ContactForm: React.FC<ContactFormProps> = () => {
             className="px-2 py-1 my-2 border-gray-200 dark:border-gray-700 dark:bg-transparent border border-solid rounded-md font-thin focus:outline-sky-400 dark:focus:outline-sky-400"
             type="text"
             placeholder="Name"
-            value={formData.fullName}
-            onChange={(e) => handleInputChange(e, 'fullName')}
+            value={formData.name}
+            onChange={(e) => handleInputChange(e, 'name')}
           />
 
           <input
