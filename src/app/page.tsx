@@ -1,10 +1,6 @@
 'use client'
 
-import { Hero } from '@/components'
-import Contact from '@/components/Contact/Contact'
-import Profile from '@/components/Profile/Profile'
-import Projects from '@/components/Projects/Projects'
-import WorkExperience from '@/components/WorkExperience/WorkExperience'
+import { Hero, Profile, WorkExperience, Projects, Contact } from '@/components'
 
 export default function Home() {
 

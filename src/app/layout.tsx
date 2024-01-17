@@ -26,7 +26,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${lato.className} ${poppins.className}`}>
+      <body className={`${lato.className} ${poppins.className} relative`}>
         <Providers>
           <Header />
           {children}

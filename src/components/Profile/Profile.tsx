@@ -4,7 +4,7 @@ import TechnologyList from '@/components/Profile/TechnologyList';
 
 const Profile: React.FC = () => {
     return ( 
-        <div id="about" className="mb-80">
+        <div id="about" className="mb-80 container mx-auto">
             <div className="flex items-center gap-5 mb-8">
                 <h1 className="font-semibold text-4xl">About me</h1>
                 <div className="line"/>

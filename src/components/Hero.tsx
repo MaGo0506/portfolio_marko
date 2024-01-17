@@ -5,7 +5,7 @@ import Button from '@/components/Button/Button';
 
 const Hero = () => {
   return (
-    <div className="relative h-screen flex items-center">
+    <div className="relative h-screen flex items-center container mx-auto">
       <div className="relative text-left bg-opacity-50 py-8 rounded-md backdrop-filter backdrop-blur-md">
       <p className="font-normal mb-5 text-lg">Hi, I&#39;m </p>
         <h1 className="font-bold mb-4 max-w-7xl flex flex-col">

@@ -1,15 +1,11 @@
-  .header {
-    backdrop-filter: blur(8px);
-  }
-  
-  .navLink {
+.navLink {
     position: relative;
     display: inline-block;
     padding-bottom: 3px;
     transition: color .15s ease-in-out
-  }
+}
 
-  .navLink::before {
+.navLink::before {
     content: '';
     position: absolute;
     bottom: 0;
@@ -18,8 +14,8 @@
     height: 2px;
     background-color: var(--primary-color-mg);
     transition: width 0.3s ease-in-out;
-  }
+}
   
-  .navLink:hover::before {
+.navLink:hover::before {
     width: 100%;
-  }
+}
