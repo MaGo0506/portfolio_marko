@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
 import Image from 'next/image';
-import Button from '@/components/Button/Button';
 import styles from './Header.module.css';
 
 interface HeaderProps {}
@@ -38,7 +37,13 @@ const Header: React.FC<HeaderProps> = () => {
           <a href="#contact" className={`hover:text-sky-400 ${styles.navLink}`}>
             Contact
           </a>
-          <Button text="Resume" />
+          <button
+            className="bg-sky-400 text-sm lg:text-base text-white hover:bg-sky-500 px-6 py-2 rounded-md transition-colors duration-150"
+            type="button"
+            onClick={() => window.open('/Marko_Goronjic-CV.pdf', '_blank')}
+          >
+            Resume
+          </button>
           {mounted && (
             <button
               className={`hover:text-sky-300 focus:outline-none ${styles.themeToggle}`}

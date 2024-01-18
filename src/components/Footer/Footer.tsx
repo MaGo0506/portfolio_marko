@@ -10,13 +10,13 @@ const Footer = () => {
 
   return (
     <footer className="dark:bg-gray-800 bg-slate-50 py-8">
-      <div className="container mx-auto">
-        <div className=" flex lg:flex-row justify-between items-center lg:items-center">
+      <div className="container mx-auto flex flex-col">
+        <div className="flex justify-between lg:items-center">
           <div className="flex items-center mb-4 lg:mb-0">
             <a href="#" className="font-bold text-2xl text-sky-400">MG</a>
           </div>
 
-          <div className="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4">
+          <div className="lg:flex flex-col hidden lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4">
             <a href="#about" className={`hover:text-sky-400 ${styles.navLink}`}>
               About
             </a>
@@ -31,7 +31,7 @@ const Footer = () => {
             </a>
           </div>
 
-          <div className="flex space-x-4 mt-4 lg:mt-0">
+          <div className="flex gap-4">
             <a href="https://github.com/MaGo0506" target="_blank" rel="noopener noreferrer">
               <Image src={theme === "light" ? "/assets/socials/github.png" : "/assets/socials/github-white.png"} alt="GitHub" height={28} width={28} />
             </a>
@@ -40,6 +40,21 @@ const Footer = () => {
             </a>
           </div>
         </div>
+
+        <div className="flex lg:hidden flex-row gap-2 justify-center">
+            <a href="#about" className={`hover:text-sky-400 ${styles.navLink}`}>
+              About
+            </a>
+            <a href="#experience" className={`hover:text-sky-400 ${styles.navLink}`}>
+              Experience
+            </a>
+            <a href="#projects" className={`hover:text-sky-400 ${styles.navLink}`}>
+              Projects
+            </a>
+            <a href="#contact" className={`hover:text-sky-400 ${styles.navLink}`}>
+              Contact
+            </a>
+          </div>
 
         <div className="mt-8 lg:mt-12 text-center text-gray-400">
           <p className="mb-2">
