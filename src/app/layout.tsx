@@ -29,7 +29,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${lato.className} ${poppins.className} relative`}>
         <Providers>
-          <Toaster position="bottom-right" toastOptions={{ 
+          <Toaster position="top-right" toastOptions={{ 
             duration: 2500, 
             style: {
               background: "#38bdff",
