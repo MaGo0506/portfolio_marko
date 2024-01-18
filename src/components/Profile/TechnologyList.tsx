@@ -1,14 +1,6 @@
 import styles from './Profile.module.css';
-
-interface TechnologyGroup {
-    technologies: string[];
-}
-  
-const technologies: TechnologyGroup[] = [
-    { technologies: ['Javascript', 'React', 'Vue (2, 3)', 'Next.js', 'Nuxt'] },
-    { technologies: ['Node.js', 'Typescript', 'Tailwind', 'Boostrap', 'Sass'] },
-    { technologies: ['Webflow', 'Redux', 'Vuex', 'HTML', 'CSS'] },
-];
+import { technologies } from './data';
+import { TechnologyGroup } from './types';
 
 const renderTechnologyList = (technologyGroup: TechnologyGroup, index: number) => (
     <ul key={index}>

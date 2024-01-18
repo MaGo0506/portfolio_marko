@@ -5,9 +5,7 @@ import { useTheme } from 'next-themes';
 import Image from 'next/image';
 import styles from './Header.module.css';
 
-interface HeaderProps {}
-
-const Header: React.FC<HeaderProps> = () => {
+const Header: React.FC = () => {
   const [mounted, setMounted] = useState(false);
   const {theme, setTheme} = useTheme();
 
@@ -38,7 +36,7 @@ const Header: React.FC<HeaderProps> = () => {
             Contact
           </a>
           <button
-            className="bg-sky-400 text-sm lg:text-base text-white hover:bg-sky-500 px-6 py-2 rounded-md transition-colors duration-150"
+            className="bg-sky-400 text-sm lg:text-base text-white hover:bg-sky-500 px-6 py-2 rounded-sm transition-colors duration-150"
             type="button"
             onClick={() => window.open('/Marko_Goronjic-CV.pdf', '_blank')}
           >

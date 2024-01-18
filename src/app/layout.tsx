@@ -3,6 +3,7 @@ import { Lato, Poppins } from 'next/font/google'
 import './globals.css'
 import { Header, Footer } from '@/components'
 import Providers from './providers'
+import { Toaster } from 'react-hot-toast'
 
 const lato = Lato({
   weight: ["300", "400", "700"],
@@ -28,6 +29,19 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${lato.className} ${poppins.className} relative`}>
         <Providers>
+          <Toaster position="bottom-right" toastOptions={{ 
+            duration: 2500, 
+            style: {
+              background: "#38bdff",
+              color: "white"
+            },
+            success: {
+              iconTheme: {
+                primary: "white",
+                secondary: "#38bdff"
+              }
+            }
+          }}/>
           <Header />
           {children}
           <Footer />

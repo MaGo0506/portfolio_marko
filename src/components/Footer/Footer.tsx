@@ -41,7 +41,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="flex lg:hidden flex-row gap-2 justify-center">
+        <div className="flex lg:hidden flex-row gap-2 justify-center text-sm">
             <a href="#about" className={`hover:text-sky-400 ${styles.navLink}`}>
               About
             </a>
@@ -56,13 +56,13 @@ const Footer = () => {
             </a>
           </div>
 
-        <div className="mt-8 lg:mt-12 text-center text-gray-400">
+        <div className="mt-8 lg:mt-12 text-center text-gray-400 text-sm lg:text-base">
           <p className="mb-2">
             Email: <a href="mailto:goronjicmarko24@gmail.com" className="text-sky-400">goronjicmarko24@gmail.com</a>
           </p>
         </div>
 
-        <div className="text-center text-sm text-gray-400 mt-8 lg:mt-12">
+        <div className="text-center text-xs lg:text-sm text-gray-400 mt-8 lg:mt-12">
           &copy; {new Date().getFullYear()} built and designed by Marko Goronjic. All rights reserved.
         </div> 
       </div>     
