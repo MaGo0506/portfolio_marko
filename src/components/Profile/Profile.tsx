@@ -6,10 +6,10 @@ const Profile: React.FC = () => {
     return ( 
         <div id="about" className="mb-80 container mx-auto">
             <div className="flex items-center gap-5 mb-8">
-                <h1 className="font-semibold text-4xl">About me</h1>
+                <h1 className="font-semibold text-2xl lg:text-4xl text-nowrap">About me</h1>
                 <div className="line"/>
             </div>
-            <div className="flex gap-10 text-gray-500 dark:text-gray-400">
+            <div className="flex flex-col lg:flex-row gap-10 text-sm lg:text-base text-gray-500 dark:text-gray-400">
                 <div className="w-3/4 flex flex-col">
                     <p className="mb-4">
                         Hello! My name is Marko, and I enjoy creating things that live on the internet. My interest in web development started when I got hold of my first family computer and explored the internet.

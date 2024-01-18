@@ -4,7 +4,7 @@
 
 .slideBlock {
     transition: transform 0.3s ease;
-    max-height: 28px;
+    max-height: 32px;
 }
 
 .workListItem {

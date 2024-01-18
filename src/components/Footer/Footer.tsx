@@ -45,9 +45,6 @@ const Footer = () => {
           <p className="mb-2">
             Email: <a href="mailto:goronjicmarko24@gmail.com" className="text-sky-400">goronjicmarko24@gmail.com</a>
           </p>
-          <p>
-            Phone: <span className="text-sky-400">+381 066439016</span>
-          </p>
         </div>
 
         <div className="text-center text-sm text-gray-400 mt-8 lg:mt-12">

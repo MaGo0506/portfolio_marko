@@ -7,12 +7,12 @@ const Hero = () => {
   return (
     <div className="relative h-screen flex items-center container mx-auto">
       <div className="relative text-left bg-opacity-50 py-8 rounded-md backdrop-filter backdrop-blur-md">
-      <p className="font-normal mb-5 text-lg">Hi, I&#39;m </p>
+      <p className="font-normal mb-5 text-base lg:text-lg">Hi, I&#39;m </p>
         <h1 className="font-bold mb-4 max-w-7xl flex flex-col">
-          <span className="underline text-sky-400 text-6xl mb-3">Marko Goronjic, a Web Developer.</span>
-          <span className="text-6xl text-gray-500">I build apps for the web.</span>
+          <span className="underline text-sky-400 text-4xl lg:text-6xl mb-3">Marko Goronjic, a Web Developer.</span>
+          <span className="text-4xl lg:text-6xl text-gray-500">I build apps for the web.</span>
         </h1>
-        <p className="mb-5 text-gray-500">I’m a web developer specializing in building (and occasionally designing) <br/> exceptional digital experiences.</p>
+        <p className="mb-5 text-gray-500 text-sm lg:text-base">I’m a web developer specializing in building (and occasionally designing) <br/> exceptional digital experiences.</p>
         <Button
           text="Get in contact"
         />

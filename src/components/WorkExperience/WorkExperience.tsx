@@ -6,7 +6,7 @@ const WorkExperience: React.FC = () => {
     return ( 
         <div id="experience" className="mb-80 container mx-auto">
              <div className="flex items-center gap-5 mb-8">
-                <h1 className="font-semibold text-4xl">Work Experience</h1>
+                <h1 className="font-semibold text-2xl lg:text-4xl text-nowrap">Work Experience</h1>
                 <div className="line"/>
             </div>
             <div>

@@ -53,10 +53,10 @@ const ContactForm: React.FC = () => {
 
   return (
     <form onSubmit={handleSubmit} className={`p-3 bg-white border-gray-200 dark:border-gray-800 border border-solid dark:bg-gray-800 rounded-sm shadow-sm ${styles.formMain}`}>
-      <div className="flex gap-2">
+      <div className="flex flex-col lg:flex-row lg:gap-2">
         <div className={`flex-auto flex-col flex justify-between ${styles.formSection}`}>
           <input
-            className="px-2 py-1 my-2 border-gray-200 dark:border-gray-700 dark:bg-transparent border border-solid rounded-md font-thin focus:outline-sky-400 dark:focus:outline-sky-400"
+            className="px-2 text-sm lg:text-base py-1 my-2 border-gray-200 dark:border-gray-700 dark:bg-transparent border border-solid rounded-md font-thin focus:outline-sky-400 dark:focus:outline-sky-400"
             type="text"
             placeholder="Name"
             value={formData.name}
@@ -64,7 +64,7 @@ const ContactForm: React.FC = () => {
           />
 
           <input
-            className="px-2 py-1 my-2 border-gray-200 dark:border-gray-700 dark:bg-transparent border border-solid rounded-md font-thin focus:outline-sky-400 dark:focus:border-sky-400"
+            className="px-2 py-1 my-2 text-sm lg:text-base border-gray-200 dark:border-gray-700 dark:bg-transparent border border-solid rounded-md font-thin focus:outline-sky-400 dark:focus:border-sky-400"
             type="email"
             placeholder='Email'
             value={formData.email}
@@ -72,14 +72,14 @@ const ContactForm: React.FC = () => {
           />
 
           <input
-            className="px-2 py-1 my-2 border-gray-200 dark:border-gray-700 dark:bg-transparent border border-solid rounded-md font-thin focus:outline-sky-400 dark:focus:border-sky-400"
+            className="px-2 py-1 my-2 text-sm lg:text-base border-gray-200 dark:border-gray-700 dark:bg-transparent border border-solid rounded-md font-thin focus:outline-sky-400 dark:focus:border-sky-400"
             type="tel"
             placeholder="Phone"
             value={formData.phone}
             onChange={(e) => handleInputChange(e, 'phone')}
           />
         </div>
-        <div className={`flex-auto flex-col flex ${styles.formSection}`}>
+        <div className={`flex-auto text-sm lg:text-base flex-col flex ${styles.formSection}`}>
           <input
             className="px-2 py-1 my-2 border-gray-200 dark:border-gray-700 dark:bg-transparent border border-solid rounded-md font-thin focus:outline-sky-400 dark:focus:border-sky-400"
             type="text"
@@ -89,7 +89,7 @@ const ContactForm: React.FC = () => {
           />
 
           <textarea
-            className={`px-2 py-1 my-2 border-gray-200 dark:border-gray-700 dark:bg-transparent border border-solid rounded-md font-thin focus:outline-sky-400 focus:ring-sky-400 ${styles.textareaMain}`}
+            className={`px-2 py-1 my-2 text-sm lg:text-base border-gray-200 dark:border-gray-700 dark:bg-transparent border border-solid rounded-md font-thin focus:outline-sky-400 focus:ring-sky-400 ${styles.textareaMain}`}
             value={formData.message}
             placeholder="Message"
             onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) =>
@@ -99,7 +99,7 @@ const ContactForm: React.FC = () => {
         </div>
       </div>
       <div className="flex justify-end mt-4 mb-2 font-medium">
-        <button className="bg-sky-400 text-white hover:bg-sky-500 px-4 py-2 rounded-md transition-colors duration-150" type="submit">Submit</button>
+        <button className="bg-sky-400 text-sm lg:text-base text-white hover:bg-sky-500 px-8 py-2 rounded-md transition-colors duration-150" type="submit">Submit</button>
       </div>
     </form>
   );
