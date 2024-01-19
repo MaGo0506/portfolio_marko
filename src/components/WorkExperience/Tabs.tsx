@@ -16,13 +16,13 @@ const Tabs: React.FC<TabsProps> = ({ workHistory }) => {
   }, []);
 
   return (
-    <div className="flex gap-7 text-gray-500 dark:text-gray-400">
+    <div className="flex md:flex-row flex-col gap-7 text-gray-500 dark:text-gray-400">
       
-         <div className="flex flex-col flex-shrink-0 relative">
+        <div className="flex flex-col flex-shrink-0 relative">
          <div className={`absolute top-0 left-0 h-full bg-sky-400 w-1 ${styles.slideBlock}`} style={{
             height: `calc(100% / ${workHistory.length})`,
             transform: `translateY(${selectedTab !== null ? selectedTab * 100 : 0}%)`,
-        }} />
+          }} />
             { workHistory.map((job, index) => (
                 <div 
                   className={`border-l-2 text-sm lg:text-base border-gray-400 cursor-pointer py-1 px-2 ${

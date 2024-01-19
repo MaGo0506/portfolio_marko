@@ -23,3 +23,9 @@
   .navLink:hover::before {
     width: 100%;
   }
+
+  @media (max-width: 400px) {
+    .hamburgerMenu {
+      width: 100%;
+    }
+  }

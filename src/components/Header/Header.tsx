@@ -3,11 +3,13 @@
 import { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
 import Image from 'next/image';
+import MobileMenu from './MobileMenu';
 import styles from './Header.module.css';
 
 const Header: React.FC = () => {
   const [mounted, setMounted] = useState(false);
-  const {theme, setTheme} = useTheme();
+  const [menuOpen, setMenuOpen] = useState(false);
+  const { theme, setTheme } = useTheme();
 
   useEffect(() => setMounted(true), []);
 
@@ -21,8 +23,35 @@ const Header: React.FC = () => {
         <div className="flex items-center">
           <a href="#" className="font-bold text-2xl text-sky-400">MG</a>
         </div>
-        <div className="flex-grow"></div>
-        <div className="flex items-center space-x-4">
+
+        <div className="md:hidden">
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className={`text-sky-400 hover:text-sky-500 focus:outline-none ${styles.hamburger}`}
+          >
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        {mounted && (
+          <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+        )}
+
+        {/* Menu Items for Desktop */}
+        <div className={`hidden md:flex items-center space-x-4 ${styles.menu} ${menuOpen ? styles.menuOpen : ''}`}>
           <a href="#about" className={`hover:text-sky-400 ${styles.navLink}`}>
             About
           </a>

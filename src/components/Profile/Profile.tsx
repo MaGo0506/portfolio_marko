@@ -10,7 +10,7 @@ const Profile: React.FC = () => {
                 <div className="line"/>
             </div>
             <div className="flex flex-col lg:flex-row gap-10 text-sm lg:text-base text-gray-500 dark:text-gray-400">
-                <div className="w-3/4 flex flex-col">
+                <div className="lg:w-3/4 flex flex-col">
                     <p className="mb-4">
                         Hello! My name is Marko, and I enjoy creating things that live on the internet. My interest in web development started when I got hold of my first family computer and explored the internet.
                     </p>
@@ -24,7 +24,7 @@ const Profile: React.FC = () => {
                     <p className="mb-4">Here are a few main technologies I’ve been working with recently:</p>
                     <TechnologyList/>
                 </div>
-                <div className={`relative ${styles.imgHolder}`}>
+                <div className={`relative mx-auto md:mx-0 ${styles.imgHolder}`}>
                     <Image
                         src="/assets/profile_img.png"
                         width={300}

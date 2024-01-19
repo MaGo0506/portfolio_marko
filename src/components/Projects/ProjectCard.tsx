@@ -27,7 +27,7 @@ const ProjectCard: React.FC<{ project: Project; isEven: boolean }> = ({ project,
           {project.description}
           </p>
         
-          <ul className={`list-none text-sm lg:text-base flex gap-3 text-sky-400 ${!isEven ? 'justify-end' : 'justify-start'}`}>
+          <ul className={`list-none text-sm lg:text-base flex gap-1 md:gap-3 text-sky-400 ${!isEven ? 'justify-end' : 'justify-start'}`}>
             {project.technologies.map((tech, index) => (
               <li key={index}>{tech}</li>
             ))}
