@@ -23,7 +23,7 @@ const ProjectCard: React.FC<{ project: Project; isEven: boolean }> = ({ project,
         <div>
           <p className="text-sky-400 text-xs lg:text-sm">Featured Project</p>
           <h2 className="text-lg lg:text-2xl font-semibold mb-2">{project.title}</h2>
-          <p className="mb-4 text-gray-500 rounded-sm text-sm lg:text-base dark:text-gray-300 p-3 bg-gray-300 dark:bg-gray-800 shadow-md">
+          <p className="mb-4 text-gray-500 dark:text-gray-300 rounded-sm text-sm lg:text-base p-3 bg-gray-300 dark:bg-gray-800 shadow-md">
           {project.description}
           </p>
         
