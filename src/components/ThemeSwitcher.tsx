@@ -6,8 +6,25 @@ const ThemeSwitch = () => {
   const { theme, setTheme } = useTheme()
 
   useEffect(() => {
-    setMounted(true)
-  }, [])
+    const storedTheme = localStorage.getItem('theme');
+
+    // Set initial theme based on browser preference if not stored in localStorage
+    if (!storedTheme) {
+      const preferredTheme =
+        window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches
+          ? 'dark'
+          : 'light';
+
+          console.log(window.matchMedia('(prefers-color-scheme: dark)'));
+          
+      setTheme(preferredTheme);
+      console.log(preferredTheme);
+      
+    }
+
+    setMounted(true);
+  }, [setTheme]);
 
   if (!mounted) {
     return null
@@ -15,9 +32,9 @@ const ThemeSwitch = () => {
 
   return (
     <select value={theme} onChange={e => setTheme(e.target.value)}>
-      <option value="system">System</option>
       <option value="dark">Dark</option>
       <option value="light">Light</option>
+      <option value="system">System</option>
     </select>
   )
 }

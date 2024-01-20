@@ -9,7 +9,7 @@ const ProjectCard: React.FC<{ project: Project; isEven: boolean }> = ({ project,
   const { theme, setTheme } = useTheme()
 
   return (
-    <div className={`flex flex-col-reverse lg:flex-row my-20 gap-4 ${isEven ? 'lg:flex-row-reverse' : ''}`}>
+    <div className={`flex flex-col-reverse lg:flex-row my-10 lg:my-20 gap-10 lg:gap-4 ${isEven ? 'lg:flex-row-reverse' : ''}`}>
       <div className="flex-shrink-0 relative">
         <Image className="rounded-md shadow-md" src={project.thumbnail} alt={project.title} width={500} height={400} />
         <a 

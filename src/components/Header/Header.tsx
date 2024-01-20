@@ -11,10 +11,26 @@ const Header: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const { theme, setTheme } = useTheme();
 
-  useEffect(() => setMounted(true), []);
+  useEffect(() => {
+    const storedTheme = localStorage.getItem('theme');
+
+    if (!storedTheme) {
+      const preferredTheme =
+        window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches
+          ? 'dark'
+          : 'light';
+
+      setTheme(preferredTheme);
+    }
+
+    setMounted(true);
+  }, [setTheme]);
 
   const toggleDarkMode = () => {
-    setTheme(theme === 'light' ? 'dark' : 'light');
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
+    localStorage.setItem('theme', newTheme);
   };
 
   return (
@@ -50,7 +66,6 @@ const Header: React.FC = () => {
           <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         )}
 
-        {/* Menu Items for Desktop */}
         <div className={`hidden md:flex items-center space-x-4 ${styles.menu} ${menuOpen ? styles.menuOpen : ''}`}>
           <a href="#about" className={`hover:text-sky-400 ${styles.navLink}`}>
             About

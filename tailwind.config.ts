@@ -9,16 +9,13 @@ const config: Config = {
   ],
 
   theme: {
-    fontFamily: {
-
-    },
     extend: {
-      backgroundImage: {
-      
+      fontFamily: {
       },
-      extend: {
-        colors: {
-          primary_color_mg: 'var(--primary-color-mg)',
+      colors: {
+        primary_color_mg: 'var(--primary-color-mg)',
+        sky: {
+          400: '#38bdf8',
         },
       },
     },

@@ -4,6 +4,13 @@ import React from 'react';
 import Button from '@/components/Button/Button';
 
 const Hero = () => {
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="relative h-screen flex items-center container mx-auto">
       <div className="relative text-left bg-opacity-50 py-8 rounded-md backdrop-filter backdrop-blur-md">
@@ -13,9 +20,7 @@ const Hero = () => {
           <span className="text-4xl lg:text-6xl text-gray-500">I build apps for the web.</span>
         </h1>
         <p className="mb-5 text-gray-500 text-sm lg:text-base">I’m a web developer specializing in building (and occasionally designing) <br/> exceptional digital experiences.</p>
-        <Button
-          text="Get in contact"
-        />
+        <Button text="Get in contact" onClick={scrollToContact} />
       </div>
     </div>
   );
