@@ -107,3 +107,25 @@ body::-moz-scrollbar-thumb {
 body::-moz-scrollbar-track {
   background-color: transparent;
 }
+
+.fadeInUp {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1.5s ease-out, transform 1s ease-out;
+}
+
+.fade {
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+
+.inView {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media(prefers-reduced-motion) {
+  .fadeInUp, .fade {
+    transition: none;
+  }
+}

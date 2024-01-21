@@ -1,22 +1,27 @@
 "use client"
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { WorkHistory } from './types';
 import styles from './WorkExperience.module.css'
-  
-  interface TabsProps {
-    workHistory: WorkHistory[];
-  }
+import { setupIntersectionObserver } from '@/app/utils/intersectionObserver';
+
+interface TabsProps {
+  workHistory: WorkHistory[];
+}
 
 const Tabs: React.FC<TabsProps> = ({ workHistory }) => {
   const [selectedTab, setSelectedTab] = useState<number | null>(null);
+  const workExperienceRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     setSelectedTab(0);
+    const cleanup = setupIntersectionObserver('fadeInUp');
+
+    return cleanup;
   }, []);
 
   return (
-    <div className="flex md:flex-row flex-col gap-7 text-gray-500 dark:text-gray-400">
+    <div ref={workExperienceRef} className="flex md:flex-row flex-col gap-7 text-gray-500 dark:text-gray-400 fadeInUp">
       
         <div className="flex flex-col flex-shrink-0 relative">
          <div className={`absolute top-0 left-0 h-full bg-sky-400 w-1 ${styles.slideBlock}`} style={{

@@ -1,9 +1,18 @@
-// Hero.tsx
+"use client"
 
-import React from 'react';
+import React, {useRef, useEffect} from 'react';
 import Button from '@/components/Button/Button';
+import { setupIntersectionObserver } from '@/app/utils/intersectionObserver';
 
 const Hero = () => {
+  const heroRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const cleanup = setupIntersectionObserver('fade');
+
+    return cleanup;
+  }, []);
+
   const scrollToContact = () => {
     const contactSection = document.getElementById('contact');
     if (contactSection) {
@@ -12,7 +21,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="relative h-screen flex items-center container mx-auto">
+    <div ref={heroRef} className="relative h-screen flex items-center container mx-auto fade">
       <div className="relative text-left bg-opacity-50 py-8 rounded-md backdrop-filter backdrop-blur-md">
       <p className="font-normal mb-5 text-base lg:text-lg">Hi, I&#39;m </p>
         <h1 className="font-bold mb-4 max-w-7xl flex flex-col">

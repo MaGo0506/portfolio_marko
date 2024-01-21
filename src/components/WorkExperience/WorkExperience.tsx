@@ -1,4 +1,3 @@
-import styles from './WorkExperience.module.css';
 import { workHistory } from './data';
 import Tabs from '@/components/WorkExperience/Tabs';
 

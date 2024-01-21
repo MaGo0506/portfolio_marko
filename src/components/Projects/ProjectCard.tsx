@@ -1,15 +1,25 @@
 'use client'
 
+import React, {useRef, useEffect} from 'react';
 import Image from 'next/image';
 import { Project } from './types';
 import { useTheme } from 'next-themes';
 import styles from './Projects.module.css';
+import { setupIntersectionObserver } from '@/app/utils/intersectionObserver';
+
 
 const ProjectCard: React.FC<{ project: Project; isEven: boolean }> = ({ project, isEven }) => {
   const { theme, setTheme } = useTheme()
+  const projectRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const cleanup = setupIntersectionObserver('fadeInUp');
+
+    return cleanup;
+  }, []);
 
   return (
-    <div className={`flex flex-col-reverse lg:flex-row my-10 lg:my-20 gap-10 lg:gap-4 ${isEven ? 'lg:flex-row-reverse' : ''}`}>
+    <div ref={projectRef} className={`flex flex-col-reverse lg:flex-row my-10 lg:my-20 gap-10 lg:gap-4 fadeInUp ${isEven ? 'lg:flex-row-reverse' : ''}`}>
       <div className="flex-shrink-0 relative">
         <Image className="rounded-md shadow-md" src={project.thumbnail} alt={project.title} width={500} height={400} />
         <a 
