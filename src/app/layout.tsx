@@ -4,6 +4,7 @@ import './globals.css'
 import { Header, Footer } from '@/components'
 import Providers from './providers'
 import { Toaster } from 'react-hot-toast'
+import { Analytics } from '@vercel/analytics/react';
 
 const lato = Lato({
   weight: ["300", "400", "700"],
@@ -46,6 +47,7 @@ export default function RootLayout({
           {children}
           <Footer />
         </Providers>
+        <Analytics />
       </body>
     </html>
   )
