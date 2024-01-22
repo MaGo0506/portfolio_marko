@@ -7,6 +7,36 @@
     max-height: 32px;
 }
 
+@media(min-width: 600px) {
+    .slideBlock {
+        max-height: 34px;
+    }
+}
+
+@media(min-width: 720px) {
+    .slideBlock {
+        max-height: 36px;
+    }
+}
+
+@media(min-width: 750px) {
+    .slideBlock {
+        max-height: 38px;
+    }
+}
+
+@media(min-width: 768px) {
+    .slideBlock {
+        max-height: 35px;
+    }
+}
+
+@media(min-width: 1024px) {
+    .slideBlock {
+        max-height: 28px;
+    }
+}
+
 .workListItem {
     max-width: 90%;
 }
