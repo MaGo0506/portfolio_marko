@@ -46,25 +46,29 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ menuOpen, setMenuOpen }) => {
         </button>
 
         <div className="flex flex-col items-center gap-10">
-            <a
+              <a
+                onClick={() => setMenuOpen(!menuOpen)}
                 href="#about"
                 className={`text-sky-400 hover:text-sky-500 ${styles.navLink}`}
               >
                 About
               </a>
               <a
+                onClick={() => setMenuOpen(!menuOpen)}
                 href="#experience"
                 className={`text-sky-400 hover:text-sky-500 ${styles.navLink}`}
               >
                 Experience
               </a>
               <a
+                onClick={() => setMenuOpen(!menuOpen)}
                 href="#projects"
                 className={`text-sky-400 hover:text-sky-500 ${styles.navLink}`}
               >
                 Projects
               </a>
               <a
+                onClick={() => setMenuOpen(!menuOpen)}
                 href="#contact"
                 className={`text-sky-400 hover:text-sky-500 ${styles.navLink}`}
               >
