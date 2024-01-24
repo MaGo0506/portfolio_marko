@@ -1,4 +1,3 @@
-import styles from './Projects.module.css';
 import { projects } from './data';
 import ProjectCard from '@/components/Projects/ProjectCard';
 
