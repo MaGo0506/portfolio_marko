@@ -43,7 +43,7 @@ const ProjectCard: React.FC<{ project: Project; isEven: boolean }> = ({ project,
             ))}
           </ul>
         </div>
-       <div className="mt-4">
+        <div className="mt-4">
             <a href={project.link} target="_blank">
               <Image
                 src={theme === 'light' ? '/assets/link.webp' : '/assets/link_dark.webp'}
