@@ -3,11 +3,13 @@
 import React, { useState, useEffect,useRef } from 'react';
 import styles from './ContactForm.module.css';
 import toast from 'react-hot-toast';
+import ReCAPTCHA from 'react-google-recaptcha';
 import { Errors, FormData } from './types';
 import { setupIntersectionObserver } from '@/app/utils/intersectionObserver';
 
 const ContactForm: React.FC = () => {
   const contactRef = useRef<HTMLDivElement | null>(null);
+  const [recaptchaValue, setRecaptchaValue] = useState<string | null>(null);
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
@@ -22,6 +24,10 @@ const ContactForm: React.FC = () => {
     message: '',
   });
 
+  const handleRecaptchaChange = (value: string | null) => {
+    setRecaptchaValue(value);
+  };
+
   useEffect(() => {
     const cleanup = setupIntersectionObserver("fadeInUp");
 
@@ -30,6 +36,11 @@ const ContactForm: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    if (!recaptchaValue) {
+      toast.error('Please complete the reCAPTCHA verification.');
+      return;
+    }
 
      const newErrors: Errors = {
       name: '',
@@ -150,6 +161,14 @@ const ContactForm: React.FC = () => {
             {errors.message && <p className="text-xs text-red-500">{errors.message}</p>}
           </div>
         </div>
+
+        <div className="mt-5">
+          <ReCAPTCHA
+            sitekey="6LdPPF4pAAAAAJrsnU4EGIJAch8ySkFl9hTmzd10"
+            onChange={handleRecaptchaChange}
+          />
+        </div>
+
         <div className="flex justify-end mt-4 mb-2 font-medium">
           <button className="bg-sky-400 text-sm lg:text-base text-white hover:bg-sky-500 px-8 py-2 rounded-sm transition-colors duration-150" type="submit">Submit</button>
         </div>
