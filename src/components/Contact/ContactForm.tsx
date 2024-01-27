@@ -76,10 +76,6 @@ const ContactForm: React.FC = () => {
       });    
   
       if (response.ok) {
-        console.log('here', toast);
-        
-        toast.success(`Hey ${formData.name}, your message was sent successfully!`)
-        
         setFormData({
           name: "",
           email: "",
@@ -87,6 +83,10 @@ const ContactForm: React.FC = () => {
           subject: "",
           message: "",
         });
+        
+        setRecaptchaValue(null);
+        
+        toast.success(`Hey ${formData.name}, your message was sent successfully!`)
       } else {
         console.error('Failed to send email. Server responded with:', response.status);
       }
@@ -162,15 +162,15 @@ const ContactForm: React.FC = () => {
           </div>
         </div>
 
-        <div className="mt-5">
+        <div className="mt-4">
           <ReCAPTCHA
             sitekey="6LdPPF4pAAAAAJrsnU4EGIJAch8ySkFl9hTmzd10"
             onChange={handleRecaptchaChange}
           />
         </div>
 
-        <div className="flex justify-end mt-4 mb-2 font-medium">
-          <button className="bg-sky-400 text-sm lg:text-base text-white hover:bg-sky-500 px-8 py-2 rounded-sm transition-colors duration-150" type="submit">Submit</button>
+        <div className="flex lg:justify-end justify-center mt-4 mb-2 font-medium">
+          <button className="bg-sky-400 w-full lg:w-40 text-sm lg:text-base text-white hover:bg-sky-500 px-8 py-2 rounded-sm transition-colors duration-150" type="submit">Submit</button>
         </div>
       </form>
     </div>
