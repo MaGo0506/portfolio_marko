@@ -9,6 +9,7 @@ import { setupIntersectionObserver } from '@/app/utils/intersectionObserver';
 
 const ContactForm: React.FC = () => {
   const contactRef = useRef<HTMLDivElement | null>(null);
+  const [recaptchaKey, setRecaptchaKey] = useState<number>(1);
   const [recaptchaValue, setRecaptchaValue] = useState<string | null>(null);
   const [formData, setFormData] = useState<FormData>({
     name: "",
@@ -83,8 +84,8 @@ const ContactForm: React.FC = () => {
           subject: "",
           message: "",
         });
-        
-        setRecaptchaValue(null);
+
+        setRecaptchaKey((prevKey) => prevKey + 1);
         
         toast.success(`Hey ${formData.name}, your message was sent successfully!`)
       } else {
@@ -164,6 +165,7 @@ const ContactForm: React.FC = () => {
 
         <div className="mt-4">
           <ReCAPTCHA
+            key={recaptchaKey}
             sitekey="6LdPPF4pAAAAAJrsnU4EGIJAch8ySkFl9hTmzd10"
             onChange={handleRecaptchaChange}
           />
