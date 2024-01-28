@@ -116,7 +116,7 @@ const ContactForm: React.FC = () => {
         </p>
         <div className="flex flex-col lg:flex-row lg:gap-2">
           <div className={`flex-auto flex-col flex justify-between ${styles.formSection}`}>
-          <input
+            <input
               className={`px-2 text-sm lg:text-base py-1 my-2 border-gray-200 dark:border-gray-700 dark:bg-transparent border border-solid rounded-md font-thin focus:outline-sky-400 dark:focus:outline-sky-400 ${errors.name && 'border-red-500'}`}
               type="text"
               placeholder="Name"
