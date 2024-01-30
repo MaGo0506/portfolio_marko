@@ -2,9 +2,9 @@
     top: -100px;
 }
 
-.bgShape div {
+/* .bgShape div {
     backdrop-filter: blur(64px);
-}
+} */
 
 .heroHolder {
     overflow: hidden;
