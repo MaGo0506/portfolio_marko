@@ -23,9 +23,9 @@ const Hero = () => {
 
   return (
     <div ref={heroRef} className={`relative h-screen flex items-center container mx-auto fade ${styles.heroHolder}`}>
-       <div className={`absolute left-1/2 h-full z-0 -rotate-45 ${styles.bgShape}`}>
+       {/* <div className={`absolute left-1/2 h-full z-0 -rotate-45 ${styles.bgShape}`}>
         <div className="w-44 lg:w-60 h-full bg-gradient-to-r overflow-hidden from-cyan-500 to-blue-500 rounded-3xl blur-3xl opacity-60"></div>
-      </div>
+      </div> */}
       <div className="relative text-left py-8">
         <p className="font-normal mb-5 text-base lg:text-lg">Hi, I&#39;m </p>
           <h1 className="font-bold mb-4 max-w-7xl flex flex-col">
