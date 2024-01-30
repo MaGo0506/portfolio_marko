@@ -1,0 +1,23 @@
+.bgShape {
+    top: -100px;
+}
+
+.heroHolder {
+    overflow: hidden;
+}
+
+@media (min-width: 640px) {
+    .heroHolder {
+        overflow: initial;
+    }
+
+    .bgShape {
+        display: none;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .bgShape {
+        display: block;
+    }
+  }

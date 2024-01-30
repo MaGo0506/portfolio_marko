@@ -3,6 +3,7 @@
 import React, {useRef, useEffect} from 'react';
 import Button from '@/components/Button/Button';
 import { setupIntersectionObserver } from '@/app/utils/intersectionObserver';
+import styles from './Hero.module.css';
 
 const Hero = () => {
   const heroRef = useRef<HTMLDivElement | null>(null);
@@ -21,8 +22,11 @@ const Hero = () => {
   };
 
   return (
-    <div ref={heroRef} className="relative h-screen flex items-center container mx-auto fade">
-      <div className="relative text-left bg-opacity-50 py-8 rounded-md backdrop-filter backdrop-blur-md">
+    <div ref={heroRef} className={`relative h-screen flex items-center container mx-auto fade ${styles.heroHolder}`}>
+       <div className={`absolute left-1/2 h-full z-0 -rotate-45 ${styles.bgShape}`}>
+        <div className="w-44 lg:w-60 h-full bg-gradient-to-r overflow-hidden from-cyan-500 to-blue-500 rounded-3xl blur-3xl opacity-60"></div>
+      </div>
+      <div className="relative text-left py-8">
         <p className="font-normal mb-5 text-base lg:text-lg">Hi, I&#39;m </p>
           <h1 className="font-bold mb-4 max-w-7xl flex flex-col">
             <span className="underline text-sky-400 text-4xl lg:text-6xl mb-3">Marko Goronjic, a Web Developer.</span>

@@ -34,7 +34,7 @@ const Header: React.FC = () => {
   };
 
   return (
-    <nav className={`py-4 fixed top-0 left-0 z-40 w-full ${styles.header}`}>
+    <nav className={`py-4 fixed top-0 left-0 z-40 w-full border-b border-gray-200 dark:border-gray-700 border-solid ${styles.header}`}>
       <div className="container mx-auto flex items-center justify-between">
         <div className="flex items-center">
           <a href="#" className="font-bold text-2xl text-sky-400">MG</a>
