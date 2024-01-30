@@ -165,6 +165,7 @@ const ContactForm: React.FC = () => {
 
         <div className="mt-4">
           <ReCAPTCHA
+            className={styles.gRecaptcha}
             key={recaptchaKey}
             sitekey="6LdPPF4pAAAAAJrsnU4EGIJAch8ySkFl9hTmzd10"
             onChange={handleRecaptchaChange}
