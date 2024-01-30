@@ -5,6 +5,7 @@ import { Header, Footer } from '@/components'
 import Providers from './providers'
 import { Toaster } from 'react-hot-toast'
 import { Analytics } from '@vercel/analytics/react';
+import Image from 'next/image'
 
 const lato = Lato({
   weight: ["300", "400", "700"],
@@ -45,6 +46,26 @@ export default function RootLayout({
               }
             }
           }}/>
+          <div className="absolute z-20 top-0 inset-x-0 flex justify-center overflow-hidden pointer-events-none">
+            <div className="lg:w-2/3 flex-none flex justify-end">
+              <Image
+                src="/assets/bg/bg-light.avif"
+                alt="bg-light"
+                className="w-[71.75rem] flex-none max-w-none dark:hidden"
+                decoding="async"
+                width={2870}
+                height={1605}
+              />
+                 <Image
+                src="/assets/bg/bg-dark.avif"
+                alt="bg-dark"
+                className="w-[71.75rem] flex-none max-w-none hidden dark:block"
+                decoding="async"
+                width={2870}
+                height={1605}
+              />
+            </div>
+          </div>
           <Header />
           {children}
           <Footer />
