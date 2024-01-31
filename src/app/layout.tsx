@@ -56,7 +56,7 @@ export default function RootLayout({
                 width={2870}
                 height={1605}
               />
-                 <Image
+              <Image
                 src="/assets/bg/bg-dark.avif"
                 alt="bg-dark"
                 className="w-[71.75rem] flex-none max-w-none hidden dark:block"
