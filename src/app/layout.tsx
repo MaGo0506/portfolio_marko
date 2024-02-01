@@ -20,7 +20,7 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: 'Marko Goronjic',
   description: 'Web developer, portfolio website',
-}
+};
 
 export default function RootLayout({
   children,
