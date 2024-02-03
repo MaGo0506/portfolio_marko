@@ -16,7 +16,7 @@ const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
   message
 }) => (
   <div>
-    <h1 className="text-red">{name}</h1>
+    <h1>{name}</h1>
     <p>{email}</p>
     <p>{phone}</p>
     <p>{message}</p>
