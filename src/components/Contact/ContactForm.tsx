@@ -112,7 +112,7 @@ const ContactForm: React.FC = () => {
     <div ref={contactRef} className="fadeInUp">
       <form  onSubmit={handleSubmit} className={`p-3 bg-white border-gray-200 dark:border-gray-800 border border-solid dark:bg-gray-800 rounded-sm shadow-sm ${styles.formMain}`}>
         <p className="text-gray-500 dark:text-gray-300 text-sm lg:text-base py-3">
-        I am actively seeking new employment opportunities. Please feel free to reach out and get in touch with me. <br/> I look forward to hearing from you soon.
+          I am actively seeking new employment opportunities. Please feel free to reach out and get in touch with me. <br/> I look forward to hearing from you soon.
         </p>
         <div className="flex flex-col lg:flex-row lg:gap-2">
           <div className={`flex-auto flex-col flex justify-between ${styles.formSection}`}>
