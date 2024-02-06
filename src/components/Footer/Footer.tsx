@@ -12,6 +12,7 @@ const Footer = () => {
     <footer className="dark:bg-gray-800 bg-slate-50 py-8">
       <div className="container mx-auto flex flex-col">
         <div className="flex justify-between lg:items-center">
+          
           <div className="flex items-center mb-4 lg:mb-0">
             <a href="#" className="font-bold text-2xl text-sky-400">MG</a>
           </div>
