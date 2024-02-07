@@ -60,7 +60,7 @@ const Footer = () => {
         <div className="mt-8 lg:mt-12 text-center text-gray-400 text-sm lg:text-base">
           <p className="mb-2">
             Email: 
-            <a href="mailto:goronjicmarko24@gmail.com" className="text-sky-400">
+            <a href="mailto:goronjicmarko24@gmail.com" className="ml-1 text-sky-400">
               goronjicmarko24@gmail.com
             </a>
           </p>
