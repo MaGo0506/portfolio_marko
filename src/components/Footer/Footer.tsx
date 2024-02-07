@@ -3,7 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import styles from './Footer.module.css';
-import { useTheme } from 'next-themes'
+import { useTheme } from 'next-themes';
 
 const Footer = () => {
   const { theme, setTheme } = useTheme();
