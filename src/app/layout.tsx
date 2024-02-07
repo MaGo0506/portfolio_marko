@@ -3,7 +3,7 @@ import { Lato, Poppins } from 'next/font/google'
 import './globals.css'
 import { Header, Footer } from '@/components'
 import Providers from './providers'
-import { Toaster } from 'react-hot-toast'
+import { Toaster } from 'react-hot-toast';
 import { Analytics } from '@vercel/analytics/react';
 import Image from 'next/image';
 
