@@ -19,7 +19,9 @@ const Profile: React.FC = () => {
     return ( 
         <div id="about" className="lg:mb-72 mb-32 pt-20 container mx-auto">
             <div className="flex items-center gap-5 mb-8">
-                <h1 className="font-semibold text-2xl lg:text-4xl text-nowrap">About me</h1>
+                <h1 className="font-semibold text-2xl lg:text-4xl text-nowrap">
+                    About me
+                </h1>
                 <div className="line"/>
             </div>
             <div ref={aboutRef} className="flex flex-col lg:flex-row gap-10 text-sm lg:text-base text-gray-500 dark:text-gray-400 fadeInUp">
