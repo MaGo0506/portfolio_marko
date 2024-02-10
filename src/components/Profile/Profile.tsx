@@ -36,7 +36,9 @@ const Profile: React.FC = () => {
                         <a href="https://www.quantox.com/" target="_blank" className="text-sky-400 transition-colors duration-200 hover:text-sky-600"> Quantox</a>. After two years there, I advanced to the position of a medior web developer at another outsourcing company, 
                         <a href="https://shift2ai.com/" target="_blank" className="text-sky-400 transition-colors duration-200 hover:text-sky-600"> Shift2ai</a>.
                     </p>
-                    <p className="mb-4">Here are a few main technologies I’ve been working with recently:</p>
+                    <p className="mb-4">
+                        Here are a few main technologies I’ve been working with recently:
+                    </p>
                     <TechnologyList/>
                 </div>
                 <div className={`relative mx-auto md:mx-0 ${styles.imgHolder}`}>
