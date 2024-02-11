@@ -32,7 +32,7 @@ const Profile: React.FC = () => {
                     <p className="mb-4">
                         Fast forward to today, I’ve had the privilege to work for two of the biggest e-commerce retail stores in my country. WinWin which was later acquired by 
                         <a href="https://www.tehnomanija.rs/" target="_blank" className="text-sky-400 transition-colors duration-200 hover:text-sky-600"> Tehnomanija DOO</a> where i worked as a system administrator.
-                        Later, I finally realized my dream and started working as an intern, then as a junior web developer at an outsourcing company called
+                            Later, I finally realized my dream and started working as an intern, then as a junior web developer at an outsourcing company called
                         <a href="https://www.quantox.com/" target="_blank" className="text-sky-400 transition-colors duration-200 hover:text-sky-600"> Quantox</a>. After two years there, I advanced to the position of a medior web developer at another outsourcing company, 
                         <a href="https://shift2ai.com/" target="_blank" className="text-sky-400 transition-colors duration-200 hover:text-sky-600"> Shift2ai</a>.
                     </p>
