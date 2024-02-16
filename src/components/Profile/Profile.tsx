@@ -27,7 +27,7 @@ const Profile: React.FC = () => {
             <div ref={aboutRef} className="flex flex-col lg:flex-row gap-10 text-sm lg:text-base text-gray-500 dark:text-gray-400 fadeInUp">
                 <div className="lg:w-3/4 flex flex-col">
                     <p className="mb-4">
-                            Hello! My name is Marko, and I enjoy creating things that live on the internet. My interest in web development started when I got hold of my first family computer and explored the internet.
+                        Hello! My name is Marko, and I enjoy creating things that live on the internet. My interest in web development started when I got hold of my first family computer and explored the internet.
                     </p>
                     <p className="mb-4">
                         Fast forward to today, I’ve had the privilege to work for two of the biggest e-commerce retail stores in my country. WinWin which was later acquired by 
