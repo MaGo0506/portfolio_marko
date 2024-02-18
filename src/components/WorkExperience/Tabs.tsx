@@ -33,8 +33,8 @@ const Tabs: React.FC<TabsProps> = ({ workHistory }) => {
                 <div 
                   className={`border-l-2 text-sm lg:text-base border-gray-400 cursor-pointer py-1 px-2 ${
                     selectedTab === index ? `${styles.selectedTab} bg-gray-200 text-sky-400 dark:bg-sky-500  dark:text-white` : 
-                    `${styles.tab} hover:text-sky-400 hover:bg-gray-100 dark:hover:text-white dark:hover:bg-sky-400 transition-colors duration-200 ${fonts.poppins.className}`
-                  }`} 
+                    `${styles.tab} hover:text-sky-400 hover:bg-gray-100 dark:hover:text-white dark:hover:bg-sky-400 transition-colors duration-200`
+                  } ${fonts.poppins.className}`} 
                   key={index} 
                   onClick={() => setSelectedTab(index)}
                 >
