@@ -2,6 +2,7 @@ import React from 'react';
 import { useTheme } from 'next-themes';
 import Image from 'next/image';
 import styles from './Header.module.css';
+import fonts from '@/app/fonts';
 
 interface MobileMenuProps {
   menuOpen: boolean;
@@ -45,7 +46,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ menuOpen, setMenuOpen }) => {
           </svg>
         </button>
 
-        <div className="flex flex-col items-center gap-10">
+        <div className={`flex flex-col items-center gap-10 ${fonts.inter.className}`}>
               <a
                 onClick={() => setMenuOpen(!menuOpen)}
                 href="#about"

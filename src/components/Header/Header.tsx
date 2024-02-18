@@ -5,6 +5,7 @@ import { useTheme } from 'next-themes';
 import Image from 'next/image';
 import MobileMenu from './MobileMenu';
 import styles from './Header.module.css';
+import fonts from '@/app/fonts';
 
 const Header: React.FC = () => {
   const [mounted, setMounted] = useState(false);
@@ -37,7 +38,7 @@ const Header: React.FC = () => {
     <nav className={`py-4 fixed top-0 left-0 z-40 w-full border-b border-gray-200 dark:border-gray-700 border-solid ${styles.header}`}>
       <div className="container mx-auto flex items-center justify-between">
         <div className="flex items-center">
-          <a href="#" className="font-bold text-2xl text-sky-400">MG</a>
+          <a href="#" className={`font-bold text-2xl text-sky-400 ${fonts.poppins.className}`}>MG</a>
         </div>
 
         <div className="md:hidden">
@@ -66,7 +67,7 @@ const Header: React.FC = () => {
           <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         )}
 
-        <div className={`hidden md:flex items-center space-x-4 ${styles.menu} ${menuOpen ? styles.menuOpen : ''}`}>
+        <div className={`hidden md:flex items-center space-x-4 ${fonts.inter.className} ${styles.menu} ${menuOpen ? styles.menuOpen : ''}`}>
           <a href="#about" className={`hover:text-sky-400 ${styles.navLink}`}>
             About
           </a>
