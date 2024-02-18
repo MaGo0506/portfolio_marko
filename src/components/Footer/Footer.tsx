@@ -4,6 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import styles from './Footer.module.css';
 import { useTheme } from 'next-themes';
+import fonts from '@/app/fonts';
 
 const Footer = () => {
   const { theme, setTheme } = useTheme();
@@ -14,10 +15,10 @@ const Footer = () => {
         <div className="flex justify-between lg:items-center">
           
           <div className="flex items-center mb-4 lg:mb-0">
-            <a href="#" className="font-bold text-2xl text-sky-400">MG</a>
+            <a href="#" className={`font-bold text-2xl text-sky-400 ${fonts.poppins.className}`}>MG</a>
           </div>
 
-          <div className="lg:flex flex-col hidden lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4">
+          <div className={`lg:flex flex-col hidden lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4 ${fonts.inter.className}`}>
             <a href="#about" className={`hover:text-sky-400 ${styles.navLink}`}>
               About
             </a>
@@ -42,7 +43,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="flex lg:hidden flex-row gap-2 justify-center text-sm">
+        <div className={`flex lg:hidden flex-row gap-2 justify-center text-sm ${fonts.inter.className}`}>
             <a href="#about" className={`hover:text-sky-400 ${styles.navLink}`}>
               About
             </a>
@@ -58,7 +59,7 @@ const Footer = () => {
           </div>
 
         <div className="mt-8 lg:mt-12 text-center text-gray-400 text-sm lg:text-base">
-          <p className="mb-2">
+          <p className={`mb-2 ${fonts.inter.className}`}>
             Email: 
             <a href="mailto:goronjicmarko24@gmail.com" className="ml-1 text-sky-400">
               goronjicmarko24@gmail.com
@@ -66,7 +67,7 @@ const Footer = () => {
           </p>
         </div>
 
-        <div className="text-center text-xs lg:text-sm text-gray-400 mt-8 lg:mt-12">
+        <div className={`text-center text-xs lg:text-sm text-gray-400 mt-8 lg:mt-12 ${fonts.inter.className}`}>
           &copy; {new Date().getFullYear()} built and designed by Marko Goronjic. All rights reserved.
         </div> 
       </div>     
