@@ -6,6 +6,7 @@ import toast from 'react-hot-toast';
 import ReCAPTCHA from 'react-google-recaptcha';
 import { Errors, FormData } from './types';
 import { setupIntersectionObserver } from '@/app/utils/intersectionObserver';
+import fonts from '@/app/fonts';
 
 const ContactForm: React.FC = () => {
   const contactRef = useRef<HTMLDivElement | null>(null);
@@ -111,10 +112,10 @@ const ContactForm: React.FC = () => {
   return (
     <div ref={contactRef} className="fadeInUp">
       <form  onSubmit={handleSubmit} className={`p-3 bg-white border-gray-200 dark:border-gray-800 border border-solid dark:bg-gray-800 rounded-sm shadow-sm ${styles.formMain}`}>
-        <p className="text-gray-500 dark:text-gray-300 text-sm lg:text-base py-3">
+        <p className={`text-gray-500 dark:text-gray-300 text-sm lg:text-base py-3 ${fonts.inter.className}`}>
           I am actively seeking new employment opportunities. Please feel free to reach out and get in touch with me. <br/> I look forward to hearing from you soon.
         </p>
-        <div className="flex flex-col lg:flex-row lg:gap-2">
+        <div className={`flex flex-col lg:flex-row lg:gap-2 ${fonts.inter.className}`}>
           <div className={`flex-auto flex-col flex justify-between ${styles.formSection}`}>
             <input
               className={`px-2 text-sm lg:text-base py-1 my-2 border-gray-200 dark:border-gray-700 dark:bg-transparent border border-solid rounded-md font-thin focus:outline-sky-400 dark:focus:outline-sky-400 ${errors.name && 'border-red-500'}`}
@@ -173,7 +174,7 @@ const ContactForm: React.FC = () => {
         </div>
 
         <div className="flex lg:justify-end justify-center mt-4 mb-2 font-medium">
-          <button className="bg-sky-400 w-full lg:w-40 text-sm lg:text-base text-white hover:bg-sky-500 px-8 py-2 rounded-sm transition-colors duration-150" type="submit">
+          <button className={`bg-sky-400 w-full lg:w-40 text-sm lg:text-base text-white hover:bg-sky-500 px-8 py-2 rounded-sm transition-colors duration-150 ${fonts.poppins.className}`} type="submit">
             Submit
           </button>
         </div>
