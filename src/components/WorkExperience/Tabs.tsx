@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { WorkHistory } from './types';
 import styles from './WorkExperience.module.css'
 import { setupIntersectionObserver } from '@/app/utils/intersectionObserver';
+import fonts from '@/app/fonts';
 
 interface TabsProps {
   workHistory: WorkHistory[];
@@ -32,7 +33,7 @@ const Tabs: React.FC<TabsProps> = ({ workHistory }) => {
                 <div 
                   className={`border-l-2 text-sm lg:text-base border-gray-400 cursor-pointer py-1 px-2 ${
                     selectedTab === index ? `${styles.selectedTab} bg-gray-200 text-sky-400 dark:bg-sky-500  dark:text-white` : 
-                    `${styles.tab} hover:text-sky-400 hover:bg-gray-100 dark:hover:text-white dark:hover:bg-sky-400 transition-colors duration-200`
+                    `${styles.tab} hover:text-sky-400 hover:bg-gray-100 dark:hover:text-white dark:hover:bg-sky-400 transition-colors duration-200 ${fonts.poppins.className}`
                   }`} 
                   key={index} 
                   onClick={() => setSelectedTab(index)}
@@ -46,7 +47,7 @@ const Tabs: React.FC<TabsProps> = ({ workHistory }) => {
       { selectedTab !== null && (
         <div>
             <div className="mb-1">
-                <p className="font-medium lg:text-lg text-base dark:text-gray-300">{workHistory[selectedTab].role} 
+                <p className={`font-medium lg:text-lg text-base dark:text-gray-300 ${fonts.poppins.className}`}>{workHistory[selectedTab].role} 
                     <span className="text-sky-400"> @ 
                         <a href={workHistory[selectedTab].link} className="text-sky-400 transition-colors duration-200 hover:text-sky-600" target="_blank"> {workHistory[selectedTab].company}</a>
                     </span>
@@ -54,10 +55,10 @@ const Tabs: React.FC<TabsProps> = ({ workHistory }) => {
             </div>
           
           
-          <h5 className="lg:text-sm text-xs mb-2">{workHistory[selectedTab].date}</h5>
-          <ul>
+          <h5 className={`lg:text-sm text-xs mb-2 ${fonts.inter.className}`}>{workHistory[selectedTab].date}</h5>
+          <ul className={`${fonts.inter.className}`}>
             {workHistory[selectedTab].jobDescription.map((description, idx) => (
-              <li className={`mb-1 text-sm lg:text-base ${styles.workListItem}`} key={idx}>{description}</li>
+              <li className={`mb-2 lg:mb-1 text-sm lg:text-base ${styles.workListItem}`} key={idx}>{description}</li>
             ))}
           </ul>
         </div>
