@@ -12,7 +12,7 @@ const inter = Inter({
 
 const fonts = {
   inter,
-    poppins
+  poppins
 }
 
 export default fonts;
