@@ -11,7 +11,7 @@ const inter = Inter({
   });
 
 const fonts = {
-    inter,
+  inter,
     poppins
 }
 
