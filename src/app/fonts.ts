@@ -11,8 +11,8 @@ const inter = Inter({
   });
 
 const fonts = {
-      inter,
-      poppins
+    inter,
+    poppins
 }
 
 export default fonts;
