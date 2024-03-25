@@ -18,12 +18,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body 
+      <body
         className="relative"
       >
         <Providers>
-          <Toaster position="top-right" toastOptions={{ 
-            duration: 2500, 
+          <Toaster position="top-right" toastOptions={{
+            duration: 2500,
             style: {
               background: "#38bdff",
               color: "white"
@@ -34,7 +34,7 @@ export default function RootLayout({
                 secondary: "#38bdff"
               }
             }
-          }}/>
+          }} />
           <div className="absolute z-20 top-0 inset-x-0 flex justify-center overflow-hidden pointer-events-none">
             <div className="lg:w-2/3 flex-none flex justify-end">
               <Image
@@ -56,7 +56,7 @@ export default function RootLayout({
             </div>
           </div>
           <Header />
-            {children}
+          {children}
           <Footer />
         </Providers>
         <Analytics />
